@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+        var family = {
+            "1st":"DB",
+            "2nd":"CK"
+        };
+        document.write("1st : "+family["1st"]+"<br>");
+        document.write("2nd : "+family["2nd"]+"<br>");
+        family.mom = "JJ";
+        family["2nd son"] = "KH"
+
+        document.write("mom : "+family.mom+"<br>");
+        document.write("2nd son : "+family["2nd son"]+"<br>");
+    </script>
+    <h2>inerate</h2>
+    <script>
+        for(var key in family){
+            document.write(key+" : "+family[key]+"<br>");
+        }
+    </script>
+    <h2>Property & Method</h2>
+    <script>
+        family.showAll = function() {
+            for(var key in this){
+            document.write(key+" : "+this[key]+"<br>");
+            }
+        }
+        family.showAll();
+    </script>
+</body>
+</html>
